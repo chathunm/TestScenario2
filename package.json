@@ -1,0 +1,43 @@
+{
+  "name": "appium_test_suite",
+  "version": "1.0.0",
+  "description": "Deriv Skill Test - Scenario 2:  Mobile App Automation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node e2e_test/test.js",
+    "ios": "APPIUM_OS=ios npm start",
+    "android": "APPIUM_OS=android npm start",
+    "test": "cross-env NODE_ENV=test mocha resource/playlist_e2e.js --reporter mochawesome --recursive --timeout 60000 --exit",
+    "wdio": "wdio run ./wdio.conf.js"
+  },  
+  "dependencies": {
+    "appium": "2.0.1",
+    "appium-android-driver": "^5.14.0",
+    "appium-base-driver": "^7.11.3",
+    "cross-env": "7.0.2",
+    "mocha": "^8.4.0",
+    "selenium-webdriver": "^4.10.0"
+  },
+  "author": "Chathuranga Mihindukulasooriya",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/appium-service": "^8.14.3",
+    "@wdio/cli": "^8.14.4",
+    "@wdio/local-runner": "^8.14.3",
+    "@wdio/mocha-framework": "^8.14.0",
+    "@wdio/spec-reporter": "^8.14.0",
+    "appium-uiautomator2-driver": "^2.29.3",
+    "appium-xcuitest-driver": "4.32.11",
+    "chai": "^4.3.7",
+    "colors": "^1.4.0",
+    "mochawesome": "^6.3.1",
+    "properties-reader": "^2.2.0",
+    "wdio-mochawesome-reporter": "^2.0.1",
+    "wdio-wait-for": "^3.0.6",
+    "webdriverio": "^8.11.2",
+    "supertest": "3.3.0",
+    "assert": "^2.0.0",
+    "parser": "^0.1.4",
+    "resolve": "^1.19.0"
+  }
+}
